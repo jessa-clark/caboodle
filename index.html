@@ -1,1 +1,53 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caboodle Landing Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <section class="sec">
+    <header>
+      <a href href="#"><img src="images/logo-color.png" class="logo"></a>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">Explore</a></li>
+        <li><a href="#">Learn</a></li>
+        <li><a href="#">Find A Store</a></li>
+      </ul>
+    </header>
+    <div class="content">
+      <div class="textBox">
+        <h2>You've Got It...<br><span>Together!</span></h2>
+        <p>Get all your make-up accessories together with Caboodles! Easy-to-carry beauty organizers, Caboodles come in fantastic fashion colors with just the right spaces and places for everything!</p>
+        <a href="#">Shop Caboodles</a>
+      </div>
+      <div class="imgBox">
+        <img src="images/pinkblue.png" class="caboodle">
+      </div>
+    </div>
+    <ul class="thumb">
+      <li><img src="images/pinkblue.png" onclick="imgSlider('images/pinkblue.png');changeBgColor('#056CF2')"></li>
+      <li><img src="images/orangepink.png" onClick="imgSlider('images/orangepink.png');changeBgColor('#F20587')"></li>
+      <li><img src="images/blue.png" onClick="imgSlider('images/blue.png');changeBgColor('#BC04BF')"></li>
+    </ul>
+    <ul class="sci">
+      <li><a href="#"><img src="images/facebook.png"></a></li>
+      <li><a href="#"><img src="images/twitter.png"></a></li>
+      <li><a href="#"><img src="images/instagram.png"></a></li>
+    </ul>
+  </section>
+  <script type="text/javascript">
+  function imgSlider(anything) {
+    document.querySelector('.caboodle').src = anything;
+  } 
+  function changeBgColor(color) {
+    const sec = document.querySelector('.sec');
+    sec.style.background = color;
+  }
+  </script>
+</body>
+</html>
